@@ -2,7 +2,7 @@
 ADDON_DIRECTORY=$1
 # KODIIP=$(ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
 PROCESS_NUM=`pgrep hyperiond | wc -l`
-if [ $PROCESS_NUM -eq 1 ]
+if [ $PROCESS_NUM -eq 2 ]
 then
 killall hyperiond 2>/dev/null
 kodi-send --action=Notification"(Hyperion,Disabled,2000,/storage/.kodi/addons/script.hyperion.switch/icon.png)"
